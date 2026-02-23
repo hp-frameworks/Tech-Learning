@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width. inital-scale=1">
+    <title>Local Storage Button</title>
+</head>
+<body>
+  this is working
+  <div id="num">0</div>
+
+  <button id="button">increase</button>
+  <script>
+    const val = document.getElementById('num')
+    const button = document.getElementById('button')
+
+    function onPageLoad() {
+      const savedVal = localStorage.getItem('num')
+      val.innerText = savedVal
+    }
+
+    onPageLoad()
+
+    function increment() {
+      const newVal = parseInt (val.innerText) + 1
+      val.innerText = newVal
+
+      localStorage.setItem('num', newVal)
+    }
+    button.addEventListener('click', increment)
+  </script>
+</body>
+</html>

@@ -20,5 +20,8 @@
   "devDependencies": {
     "prettier": "^3.7.1",
     "prettier-plugin-sql": "^0.19.2"
+  },
+  "dependencies": {
+    "react-router-dom": "^7.13.1"
   }
 }
